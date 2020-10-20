@@ -11,7 +11,8 @@ namespace FindMaximumProblemUsingGeneric
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            /// Finds max among the given three data
+            Console.WriteLine(FindMaximum.MaxIntegerAmongThree(30, 90, 60));
         }
     }
 }
