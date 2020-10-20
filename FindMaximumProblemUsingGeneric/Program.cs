@@ -11,8 +11,10 @@ namespace FindMaximumProblemUsingGeneric
     {
         static void Main(string[] args)
         {
-            /// Finds max among the given three data
+            /// UC 1 : Finds max among the given three data
             Console.WriteLine(FindMaximum.MaxIntegerAmongThree(30, 90, 60));
+            /// UC 2 : Finds the max float value among three
+            Console.WriteLine(FindMaximum.MaxFloatAmongThree(5.645, 5.64, 5.648));
         }
     }
 }
