@@ -147,16 +147,17 @@ namespace MStestFindMaxProblem
         }
 
         /// <summary>
-        /// UC 3 : Refactor 2 : Added Generic Class
+        /// UC 4 : Finds the maximum among any number of values.
         /// </summary>
         [TestMethod]
-        public void UC3Refactor2()
+        public void FindMaxAmongAnyNumberOfValues()
         {
             //Arrange
-            double expected = 85.67;
-            GenericMaximum<double> maxFloat = new GenericMaximum<double>(23.56, 85.67, 67.23);
+            int[] arr = { 12, 45, 67, 234, 67 };
+            int expected = 234;
+            GenericMaximum<int> generic = new GenericMaximum<int>(arr);
             //Act
-            double actual = maxFloat.MaxMethod();
+            double actual = generic.MaxMethod();
             //Assert
             Assert.AreEqual(expected, actual);
         }

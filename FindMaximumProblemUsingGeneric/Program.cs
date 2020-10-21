@@ -11,13 +11,13 @@ namespace FindMaximumProblemUsingGeneric
     {
         static void Main(string[] args)
         {
+            /// UC 5 : Prints out the max value given any number of values
             int[] arr1 = { 12, 45, 67, 234, 67 };
-            GenericMaximum<int> generic = new GenericMaximum<int>(arr1);
-            Console.WriteLine(generic.MaxMethod());
-
-            string[] arr2 = { "Ram", "Shyam", "Geeta", "Zebra" };
-            GenericMaximum<string> gen = new GenericMaximum<string>(arr2);
-            Console.WriteLine(gen.MaxMethod());
+            GenericMaximum<int> generic1 = new GenericMaximum<int>(arr1);
+            generic1.PrintMaxValue();
+            string[] arr2 = { "Ram", "Shyam", "Geeta", "Aseem" };
+            GenericMaximum<string> generic2 = new GenericMaximum<string>(arr2);
+            generic2.PrintMaxValue();
         }
     }
 }
