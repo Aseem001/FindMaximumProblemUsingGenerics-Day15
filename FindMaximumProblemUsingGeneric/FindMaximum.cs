@@ -22,11 +22,11 @@ namespace FindMaximumProblemUsingGeneric
         public static int MaxIntegerAmongThree(int firstValue,int secondValue,int thirdValue)
         {
             Console.WriteLine("Maximum number among {0}, {1} and {2}: ",firstValue,secondValue,thirdValue);
-            /// Checks if firstValue is great then both secondValue and thirdValue
-            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
+            /// Checks if firstValue is greater than both secondValue and thirdValue
+            if (firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) >= 0)
                 return firstValue;
-            /// Checks if secondValue is great then both firstValue and thirdValue
-            else if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
+            /// Checks if secondValue is greater than both firstValue and thirdValue
+            else if (secondValue.CompareTo(firstValue) >= 0 && secondValue.CompareTo(thirdValue) >= 0)
                 return secondValue;
             else
                 return thirdValue;
@@ -43,10 +43,30 @@ namespace FindMaximumProblemUsingGeneric
         {
             Console.WriteLine("Maximum number among {0}, {1} and {2}: ", firstValue, secondValue, thirdValue);
             /// Checks if firstValue is great then both secondValue and thirdValue
-            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
+            if (firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) >= 0)
                 return firstValue;
             /// Checks if secondValue is great then both firstValue and thirdValue
-            else if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
+            else if (secondValue.CompareTo(firstValue) >= 0 && secondValue.CompareTo(thirdValue) >= 0)
+                return secondValue;
+            else
+                return thirdValue;
+        }
+
+        /// <summary>
+        /// UC 3 : Finds Maximum string value among three.
+        /// </summary>
+        /// <param name="firstValue">The first value.</param>
+        /// <param name="secondValue">The second value.</param>
+        /// <param name="thirdValue">The third value.</param>
+        /// <returns></returns>
+        public static string MaxStringAmongThree(string firstValue, string secondValue, string thirdValue)
+        {
+            Console.WriteLine("Maximum string among {0}, {1} and {2}: ", firstValue, secondValue, thirdValue);
+            /// Checks if firstValue is great then both secondValue and thirdValue
+            if (firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) >= 0)
+                return firstValue;
+            /// Checks if secondValue is great then both firstValue and thirdValue
+            else if (secondValue.CompareTo(firstValue) >= 0 && secondValue.CompareTo(thirdValue) >= 0)
                 return secondValue;
             else
                 return thirdValue;

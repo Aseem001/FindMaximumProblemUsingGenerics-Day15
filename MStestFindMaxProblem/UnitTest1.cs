@@ -89,5 +89,47 @@ namespace MStestFindMaxProblem
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        /// <summary>
+        /// UC 3.1 : Given the maximum string at first position returns the same string.
+        /// </summary>
+        [TestMethod]
+        public void GivenMaxStringAtFirstPos_ReturnTheSameNumber()
+        {
+            //Arrange
+            string expected = "Kerala";
+            //Act
+            string actual = FindMaximum.MaxStringAmongThree("Kerala","Apple","Cat");
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        /// UC 3.2 : Given the maximum string at second position returns the same string.
+        /// </summary>
+        [TestMethod]
+        public void GivenMaxStringAtSecondPos_ReturnTheSameNumber()
+        {
+            //Arrange
+            string expected = "Zebra";
+            //Act
+            string actual = FindMaximum.MaxStringAmongThree("Kerala", "Zebra", "Cat");
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        /// UC 3.3 : Given the maximum string at third position returns the same string.
+        /// </summary>
+        [TestMethod]
+        public void GivenMaxStringAtThirdPos_ReturnTheSameNumber()
+        {
+            //Arrange
+            string expected = "Zebra";
+            //Act
+            string actual = FindMaximum.MaxStringAmongThree("Kerala", "Apple", "Zebra");
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
