@@ -131,5 +131,34 @@ namespace MStestFindMaxProblem
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        /// <summary>
+        /// UC 3 : Refactor 1 : Added Generic Method
+        /// </summary>
+        [TestMethod]
+        public void UC3Refactor1()
+        {
+            //Arrange
+            string expected = "Zebra";
+            //Act
+            string actual = FindMaximum.MaxValueAmongThreeRefactor1<string>("Kerala", "Apple", "Zebra");
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        /// UC 3 : Refactor 2 : Added Generic Class
+        /// </summary>
+        [TestMethod]
+        public void UC3Refactor2()
+        {
+            //Arrange
+            double expected = 85.67;
+            GenericMaximum<double> maxFloat = new GenericMaximum<double>(23.56, 85.67, 67.23);
+            //Act
+            double actual = maxFloat.MaxMethod();
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
