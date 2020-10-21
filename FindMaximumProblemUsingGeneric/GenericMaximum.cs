@@ -6,12 +6,33 @@ namespace FindMaximumProblemUsingGeneric
 {
     public class GenericMaximum<T> where T: IComparable
     {
-        T firstValue, secondValue, thirdValue;
-        public GenericMaximum(T firstValue, T secondValue, T thirdValue)
+        public T[] value;
+
+        public GenericMaximum(T[] value)
         {
-            this.firstValue = firstValue;
-            this.secondValue = secondValue;
-            this.thirdValue = thirdValue;
+            this.value = value;
+        }
+
+        /// <summary>
+        /// UC 4 : Sorts the specified values.
+        /// </summary>
+        /// <param name="values">The values.</param>
+        /// <returns></returns>
+        public T[] Sort(T[] values)
+        {
+            Array.Sort(values);
+            return values;
+        }
+
+        /// <summary>
+        /// UC 4 : Finds Maximum value.
+        /// </summary>
+        /// <param name="values">The values.</param>
+        /// <returns></returns>
+        private T MaxValue(params T[] values)
+        {
+            var sortedValues = Sort(values);
+            return sortedValues[^1];
         }
 
         /// <summary>
@@ -39,7 +60,7 @@ namespace FindMaximumProblemUsingGeneric
         /// <returns></returns>
         public T MaxMethod()
         {
-            T maxValue = MaximumValueAmongThree(this.firstValue, this.secondValue, this.thirdValue);
+            var maxValue = MaxValue(this.value);
             return maxValue;
         }
     }

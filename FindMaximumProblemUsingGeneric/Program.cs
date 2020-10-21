@@ -11,25 +11,13 @@ namespace FindMaximumProblemUsingGeneric
     {
         static void Main(string[] args)
         {
-            /// UC 1 : Finds max among the given three data
-            Console.WriteLine(FindMaximum.MaxIntegerAmongThree(70, 50, 60));
-            /// UC 2 : Finds the max float value among three
-            Console.WriteLine(FindMaximum.MaxFloatAmongThree(5.645, 5.64, 5.648));
-            /// UC 3 : Finds the max string value among three
-            Console.WriteLine(FindMaximum.MaxStringAmongThree("Apple","Banana","Peach"));
+            int[] arr1 = { 12, 45, 67, 234, 67 };
+            GenericMaximum<int> generic = new GenericMaximum<int>(arr1);
+            Console.WriteLine(generic.MaxMethod());
 
-            /// UC 3: Refactor 1
-            Console.WriteLine(FindMaximum.MaxValueAmongThreeRefactor1<int>(12,45,56));
-            Console.WriteLine(FindMaximum.MaxValueAmongThreeRefactor1<double>(12.45, 12.56, 12.89));
-            Console.WriteLine(FindMaximum.MaxValueAmongThreeRefactor1<string>("Rain","Game","Football"));
-
-            /// UC 3 : Refactor 2
-            GenericMaximum<int> maxInt = new GenericMaximum<int>(50, 40, 300);
-            GenericMaximum<double> maxFloat = new GenericMaximum<double>(23.56,45.67,67.23);
-            GenericMaximum<string> maxString = new GenericMaximum<string>("Cricket", "Football", "Hockey");
-            Console.WriteLine(maxInt.MaxMethod());
-            Console.WriteLine(maxFloat.MaxMethod());
-            Console.WriteLine(maxString.MaxMethod());
+            string[] arr2 = { "Ram", "Shyam", "Geeta", "Zebra" };
+            GenericMaximum<string> gen = new GenericMaximum<string>(arr2);
+            Console.WriteLine(gen.MaxMethod());
         }
     }
 }
